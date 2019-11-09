@@ -1,10 +1,37 @@
-${AnsiColor.BRIGHT_CYAN} _____               _                ${AnsiColor.BLUE} ______  _             _
-${AnsiColor.BRIGHT_CYAN}/  ___|             (_)               ${AnsiColor.BLUE} | ___ \| |           | |
-${AnsiColor.BRIGHT_CYAN}\ `--.  _ __   _ __  _  _ __    __ _  ${AnsiColor.BLUE} | |_/ /| |  __ _   __| |  ___
-${AnsiColor.BRIGHT_CYAN} `--. \| '_ \ | '__|| || '_ \  / _` | ${AnsiColor.BLUE} | ___ \| | / _` | / _` | / _ \
-${AnsiColor.BRIGHT_CYAN}/\__/ /| |_) || |   | || | | || (_| | ${AnsiColor.BLUE} | |_/ /| || (_| || (_| ||  __/
-${AnsiColor.BRIGHT_CYAN}\____/ | .__/ |_|   |_||_| |_| \__, | ${AnsiColor.BLUE} \____/ |_| \__,_| \__,_| \___|
-${AnsiColor.BRIGHT_CYAN}       | |                      __/ |
-${AnsiColor.BRIGHT_CYAN}       |_|                     |___/
+${AnsiColor.BRIGHT_CYAN}              _                ${AnsiColor.BLUE} ______  _             _
+${AnsiColor.BRIGHT_CYAN}             (_)               ${AnsiColor.BLUE} | ___ \| |           | |
+${AnsiColor.BRIGHT_CYAN} _ __   _ __  _  _ __    __ _  ${AnsiColor.BLUE} | |_/ /| |  __ _   __| |  ___
+${AnsiColor.BRIGHT_CYAN}| '_ \ | '__|| || '_ \  / _` | ${AnsiColor.BLUE} | ___ \| | / _` | / _` | / _ \
+${AnsiColor.BRIGHT_CYAN}| |_) || |   | || | | || (_| | ${AnsiColor.BLUE} | |_/ /| || (_| || (_| ||  __/
+${AnsiColor.BRIGHT_CYAN}| .__/ |_|   |_||_| |_| \__, | ${AnsiColor.BLUE} \____/ |_| \__,_| \__,_| \___|
+${AnsiColor.BRIGHT_CYAN}| |                      __/ |
+${AnsiColor.BRIGHT_CYAN}|_|                     |___/
 
 ${AnsiColor.BLUE}:: SpringBlade :: ${spring.application.name}:${AnsiColor.RED}${blade.env}${AnsiColor.BLUE} :: Running SpringBoot ${spring-boot.version} :: ${AnsiColor.BRIGHT_BLACK}
+
+
+ ${AnsiColor.RED}                                              _oo0oo_                      ${AnsiColor.GREEN}                          _oo0oo_
+ ${AnsiColor.RED}                                            o888888888o                    ${AnsiColor.GREEN}                         o8888888o
+ ${AnsiColor.RED}                                            o888888888o                    ${AnsiColor.GREEN}                        o888888888o
+ ${AnsiColor.RED}                                            88\" . \"88                    ${AnsiColor.GREEN}                        88\" . \"88
+ ${AnsiColor.RED}                                             (| -_- |)                     ${AnsiColor.GREEN}                         (| -_- |)
+ ${AnsiColor.RED}                                             0\\ = //0                     ${AnsiColor.GREEN}                         (| -_- |)
+ ${AnsiColor.RED}                                           ___/`---'\\___                  ${AnsiColor.GREEN}                      ___/`---'\\___
+ ${AnsiColor.RED}                                         .' \\\\|     |// '.               ${AnsiColor.GREEN}                    .' \\\\|     |// '.
+ ${AnsiColor.RED}                                        / \\\\|||  :  |||// \\             ${AnsiColor.GREEN}                    / \\\\|||  :  |||// \\
+ ${AnsiColor.RED}                                       / _||||| -:- |||||- \\              ${AnsiColor.GREEN}                   / _||||| -:- |||||- \\
+ ${AnsiColor.RED}                                      |   | \\\\\\  -  /// |   |           ${AnsiColor.GREEN}                   |   | \\\\\\  -  /// |  |
+ ${AnsiColor.RED}                                      | \\_|  ''\\---/''  |_/ |            ${AnsiColor.GREEN}                   | \\_|  ''\\---/''  |_/ |
+ ${AnsiColor.RED}                                      \\  .-\\__  '-'  ___/-. /            ${AnsiColor.GREEN}                   \\  .-\\__  '-'  ___/-./
+ ${AnsiColor.RED}                                    ___'. .'  /--.--\\  `. .'___           ${AnsiColor.GREEN}                 ___'. .'  /--.--\\  `. .'___
+ ${AnsiColor.RED}                                 .\"\" '<  `.___\\_<|>_/___.' >' \"\".     ${AnsiColor.GREEN}              .\"\" '<  `.___\\_<|>_/___.' >' \"\".
+ ${AnsiColor.RED}                                | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |      ${AnsiColor.GREEN}             | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |
+ ${AnsiColor.RED}                                \\  \\ `_.   \\_ __\\ /__ _/   .-` //      ${AnsiColor.GREEN}             \\  \\ `_.   \\_ __\\ /__ _/   .-` //
+ ${AnsiColor.RED}                            =====`-.____`.___ \\_____/___.-`___.-'=====    ${AnsiColor.GREEN}            =====`-.____`.___ \\_____/___.-`___.-'=====
+ ${AnsiColor.RED}                                         `=---------------='               ${AnsiColor.GREEN}                         `=---------------='
+
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    ${AnsiColor.GREEN}             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              阿弥陀佛        佛祖保佑         永无BUG                            阿弥陀佛        佛祖保佑         永无BUG
+
+
+
