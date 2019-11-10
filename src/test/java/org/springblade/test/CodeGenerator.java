@@ -21,7 +21,7 @@ import org.springblade.develop.support.BladeCodeGenerator;
 /**
  * 代码生成器
  *
- * @author Chill
+ * @author LeMenPan
  */
 public class CodeGenerator {
 
@@ -36,7 +36,7 @@ public class CodeGenerator {
 	/**
 	 * 代码生成的包名
 	 */
-	public static String PACKAGE_NAME = "org.springblade.desk";
+	public static String PACKAGE_NAME = "org.springblade.modules.lemenpan";
 	/**
 	 * 前端代码生成所属系统
 	 */
@@ -44,19 +44,23 @@ public class CodeGenerator {
 	/**
 	 * 前端代码生成地址
 	 */
-	public static String PACKAGE_WEB_DIR = "/Users/chill/Workspaces/product/Sword";
+	public static String PACKAGE_WEB_DIR = "H:\\generate";
+	/**
+	 * 前端代码生成地址
+	 */
+	public static String PACKAGE_JAVA_DIR = "K:\\back-end\\SpringBlade";
 	/**
 	 * 需要去掉的表前缀
 	 */
-	public static String[] TABLE_PREFIX = {"blade_"};
+	public static String[] TABLE_PREFIX = {""};
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] INCLUDE_TABLES = {"blade_notice"};
+	public static String[] INCLUDE_TABLES = {"prosonl_info"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
-	public static String[] EXCLUDE_TABLES = {};
+//	public static String[] EXCLUDE_TABLES = {"PERSONL_INFO"};
 	/**
 	 * 是否包含基础业务字段
 	 */
@@ -76,11 +80,13 @@ public class CodeGenerator {
 		generator.setSystemName(SYSTEM_NAME);
 		generator.setPackageName(PACKAGE_NAME);
 		generator.setPackageWebDir(PACKAGE_WEB_DIR);
+		generator.setPackageDir(PACKAGE_JAVA_DIR);
 		generator.setTablePrefix(TABLE_PREFIX);
 		generator.setIncludeTables(INCLUDE_TABLES);
-		generator.setExcludeTables(EXCLUDE_TABLES);
+//		generator.setExcludeTables(EXCLUDE_TABLES);
 		generator.setHasSuperEntity(HAS_SUPER_ENTITY);
 		generator.setSuperEntityColumns(SUPER_ENTITY_COLUMNS);
+		generator.setHasWrapper(true);
 		generator.run();
 	}
 
