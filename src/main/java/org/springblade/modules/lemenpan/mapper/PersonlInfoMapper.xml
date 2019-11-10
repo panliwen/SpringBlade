@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.lemenpan.mapper.PersonlInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="personlInfoResultMap" type="org.springblade.modules.lemenpan.entity.PersonlInfo">
+        <id column="id" property="id"/>
+        <result column="User_Id" property="userId"/>
+        <result column="name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="heigth" property="heigth"/>
+        <result column="hpone" property="hpone"/>
+        <result column="email" property="email"/>
+        <result column="birthday" property="birthday"/>
+        <result column="nation" property="nation"/>
+        <result column="Native_Place" property="nativePlace"/>
+        <result column="Birthday_Address" property="birthdayAddress"/>
+        <result column="Create_User" property="createUser"/>
+        <result column="Create_Date" property="createDate"/>
+        <result column="remark" property="remark"/>
+        <result column="Is_Deleted" property="isDeleted"/>
+        <result column="Tenant_Id" property="tenantId"/>
+    </resultMap>
+
+
+    <select id="selectPersonlInfoPage" resultMap="personlInfoResultMap">
+        select * from personl_info where is_deleted = 0
+    </select>
+
+    </mapper>

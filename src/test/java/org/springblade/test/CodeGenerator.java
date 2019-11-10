@@ -34,7 +34,7 @@ public class CodeGenerator {
 	 */
 	public static String SERVICE_NAME = "blade-desk";
 	/**
-	 * 代码生成的包名
+	 * 代码生成的包名（存放在具体哪个包下）
 	 */
 	public static String PACKAGE_NAME = "org.springblade.modules.lemenpan";
 	/**
@@ -46,7 +46,7 @@ public class CodeGenerator {
 	 */
 	public static String PACKAGE_WEB_DIR = "H:\\generate";
 	/**
-	 * 前端代码生成地址
+	 * 后端代码生成地址
 	 */
 	public static String PACKAGE_JAVA_DIR = "K:\\back-end\\SpringBlade";
 	/**
@@ -56,7 +56,7 @@ public class CodeGenerator {
 	/**
 	 * 需要生成的表名(两者只能取其一)
 	 */
-	public static String[] INCLUDE_TABLES = {"prosonl_info"};
+	public static String[] INCLUDE_TABLES = {"family"};
 	/**
 	 * 需要排除的表名(两者只能取其一)
 	 */
@@ -68,7 +68,7 @@ public class CodeGenerator {
 	/**
 	 * 基础业务字段
 	 */
-	public static String[] SUPER_ENTITY_COLUMNS = {"create_time", "create_user", "update_time", "update_user", "status", "is_deleted"};
+//	public static String[] SUPER_ENTITY_COLUMNS = {"create_time", "create_user", "update_time", "update_user", "status", "is_deleted"};
 
 	/**
 	 * RUN THIS
@@ -83,9 +83,8 @@ public class CodeGenerator {
 		generator.setPackageDir(PACKAGE_JAVA_DIR);
 		generator.setTablePrefix(TABLE_PREFIX);
 		generator.setIncludeTables(INCLUDE_TABLES);
-//		generator.setExcludeTables(EXCLUDE_TABLES);
 		generator.setHasSuperEntity(HAS_SUPER_ENTITY);
-		generator.setSuperEntityColumns(SUPER_ENTITY_COLUMNS);
+//		generator.setSuperEntityColumns(SUPER_ENTITY_COLUMNS);
 		generator.setHasWrapper(true);
 		generator.run();
 	}

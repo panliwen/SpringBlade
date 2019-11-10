@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.lemenpan.mapper.FamilyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="familyResultMap" type="org.springblade.modules.lemenpan.entity.Family">
+        <id column="id" property="id"/>
+        <result column="Person_Id" property="personId"/>
+        <result column="name" property="name"/>
+        <result column="sex" property="sex"/>
+        <result column="relation" property="relation"/>
+        <result column="hpone" property="hpone"/>
+        <result column="email" property="email"/>
+        <result column="Create_User" property="createUser"/>
+        <result column="Create_Date" property="createDate"/>
+        <result column="remark" property="remark"/>
+        <result column="Work" property="Work"/>
+        <result column="Is_Deleted" property="isDeleted"/>
+        <result column="Tenant_Id" property="tenantId"/>
+    </resultMap>
+
+
+    <select id="selectFamilyPage" resultMap="familyResultMap">
+        select * from family where is_deleted = 0
+    </select>
+
+</mapper>
