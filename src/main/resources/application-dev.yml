@@ -13,10 +13,18 @@ spring:
     #  commandTimeout: 5000
   datasource:
     #Mysql数据源配置
+    #Mysql数据源配置
     url: jdbc:mysql://127.0.0.1:3306/blade?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8
     username: root
     password: passw0rd
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+    #Oracle数据源配置
+    #url: jdbc:oracle:thin:@192.168.0.230:1521:ORCL
+    #username: C##HEHUI
+    #password: home
+    #driver-class-name: oracle.jdbc.OracleDriver
+
 
 #blade配置
 blade:

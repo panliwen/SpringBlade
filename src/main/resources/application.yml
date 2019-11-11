@@ -1,3 +1,6 @@
+#database:
+#  type: oracle   使用Oracle数据源的话，将有关oracle的配置放开，关了Mysql
+
 #服务器配置
 server:
   port: 8090
@@ -30,6 +33,32 @@ spring:
     add-mappings: false
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+     #Oracle数据访问配置
+#   driver-class-name: oracle.jdbc.OracleDriver
+#    druid:
+#      initial-size: 5
+#      max-active: 20
+#      min-idle: 5
+#      max-wait: 60000
+#      validation-query: select 1 from dual
+#      validation-query-timeout: 2000
+#      test-on-borrow: false
+#      test-on-return: false
+#      test-while-idle: true
+#      time-between-eviction-runs-millis: 60000
+#      min-evictable-idle-time-millis: 300000
+#      filters: stat,wall
+#      stat-view-servlet:
+#        enabled: true
+#        login-username: blade
+#        login-password: 1qaz@WSX
+#      web-stat-filter:
+#        enabled: true
+#        url-pattern: /*
+#        exclusions: '*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*'
+#        session-stat-enable: true
+#        session-stat-max-count: 10
+      #Oracle数据访问配置
   devtools:
     restart:
       log-condition-evaluation-delta: false
