@@ -1,0 +1,82 @@
+/**
+ * Copyright (c) 2018-2028, Chill Zhuang 庄骞 (smallchill@163.com).
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package $!{package.ServiceImpl};
+
+#set($voPackage=$package.Entity.replace("entity","vo"))
+import $!{package.Entity}.$!{entity};
+import $!{voPackage}.$!{entity}VO;
+import $!{wrapperPackage}.$!{entity}Wrapper;
+import $!{package.Mapper}.$!{table.mapperName};
+import $!{package.Service}.$!{table.serviceName};
+import $!{superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import org.springblade.core.tool.utils.CollectionUtil;
+import org.springblade.core.tool.utils.Func;
+
+/**
+ * $!{table.comment} 服务实现类
+ *
+ * @author $!{author}
+ * @since $!{date}
+ */
+@Service
+@AllArgsConstructor
+#if($!{kotlin})
+open class $!{table.serviceImplName} : $!{superServiceImplClass}<$!{table.mapperName}, $!{entity}>(), $!{table.serviceName} {
+
+}
+#else
+public class $!{table.serviceImplName} extends $!{superServiceImplClass}<$!{table.mapperName}, $!{entity}> implements $!{table.serviceName} {
+
+	@Override
+	public IPage<$!{entity}VO> select$!{entity}sPage(IPage<$!{entity}VO> page, $!{entity}VO entityVO) {
+        List<$!{entity}> list = baseMapper.select$!{entity}sPage(page, entityVO);
+        List<$!{entity}VO> returnList = new ArrayList<>();
+        if(CollectionUtil.isNotEmpty(list)){
+            for ($!{entity} $!{table.entityPath} : list) {
+                $!{entity}VO $!{table.entityPath}VO = detail$!{entity}(new $!{entity}Wrapper().entityVO($!{table.entityPath}));
+                returnList.add($!{table.entityPath}VO);
+            }
+            page.setRecords(returnList);
+        }
+		return page;
+	}
+
+    @Override
+    public $!{entity}VO detail$!{entity}($!{entity}VO entityVO) {
+        if (Func.notNull(entityVO.getId())) {
+            Long $!{table.entityPath}Id = entityVO.getId();
+            //
+            $!{entity} $!{table.entityPath} = baseMapper.selectById($!{table.entityPath}Id);
+            $!{entity}VO $!{table.entityPath}VO = new $!{entity}Wrapper().entityVO($!{table.entityPath});
+
+            return convert$!{entity}VO($!{table.entityPath}VO);
+        }
+
+        return new $!{entity}VO();
+    }
+
+    private $!{entity}VO convert$!{entity}VO($!{entity}VO $!{table.entityPath}VO){
+
+        return $!{table.entityPath}VO;
+    }
+
+}
+#end
